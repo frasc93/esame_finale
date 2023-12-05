@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "image": "https://www.ikea.com/it/it/images/products/holmsjoe-sgabello-faggio-jonsbyn-nero__1179403_pe895924_s5.jpg?f=s",
+        "title": "Sgabello",
+        "place": "Vigevano",
+        "price": 130,
+        "description": "Bellissimo sgabello in legno pregiato"
+        
+
+    },
+    {
+        "id": 2,
+        "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/57/57e095cd-4910-48c0-ae05-d17d82b00063?rule=card-desktop-new-small-2x-auto",
+        "title": "Levigatrice",
+        "place": "Siena",
+        "price": 250,
+        "description": "Bellissima levigatrice"
+    },
+    {
+        "id": 3,
+        "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/bd/bd4d1398-e21c-4b3d-af47-9bf9888fbd30?rule=card-desktop-new-small-2x-auto",
+        "title": "Casa",
+        "place": "Milano",
+        "price": 250000,
+        "description": "Delizioso appartamento in centro a Milano dotato di tutti i servizi"
+    }
+]
