@@ -1,8 +1,17 @@
 <div class="container mt-3">
     <img src="https://assets.subito.it/static/logos/corporate.svg" style="width: 300px;" alt="">
 </div>
+<div class="container mt-5">
+    <input class="input-search" [(ngModel)]="searchQuery" placeholder="Cerca..." (input)="filterProducts()">
+    <select [(ngModel)]="selectedCategory" (change)="filterProducts()">
+        <option value="Tutte">Tutte le categorie</option>
+        <option value="Casa">Casa</option>
+        <option value="Lavoro">Lavoro</option>
+        <option value="Meccanica">Meccanica</option>
+      </select>
+</div>
 <div class="container d-flex flex-column justify-content-center align-items-center mt-3" style="margin-bottom: 10px; cursor: pointer;">
-<div *ngFor="let product of products, let i = index" class="card d-flex mt-3" style="width: 48rem;">
+<div *ngFor="let product of filteredProducts, let i = index" class="card d-flex mt-3" style="width: 48rem;">
     <div [routerLink]="['/product', product.id]" class="card-body d-flex mt-3">
         <div>
         <img src={{product.image}} class="card-img-top" alt="..." style="width: 200px; margin-right: 50px;">
@@ -11,6 +20,7 @@
       <h5 class="card-title">{{product.title}}</h5>
       <p class="card-text">{{product.place}}</p>
       <p style="color: red;" class="card-text">{{product.price}} €</p>
+      <p class="card-text">{{product.category}}</p>
     </div>
     </div>
   </div>

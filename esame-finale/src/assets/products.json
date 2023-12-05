@@ -5,7 +5,8 @@
         "title": "Sgabello",
         "place": "Vigevano",
         "price": 130,
-        "description": "Bellissimo sgabello in legno pregiato"
+        "description": "Bellissimo sgabello in legno pregiato",
+        "category": "Casa"
         
 
     },
@@ -15,7 +16,8 @@
         "title": "Levigatrice",
         "place": "Siena",
         "price": 250,
-        "description": "Bellissima levigatrice"
+        "description": "Bellissima levigatrice",
+        "category": "Meccanica"
     },
     {
         "id": 3,
@@ -23,6 +25,7 @@
         "title": "Casa",
         "place": "Milano",
         "price": 250000,
-        "description": "Delizioso appartamento in centro a Milano dotato di tutti i servizi"
+        "description": "Delizioso appartamento in centro a Milano dotato di tutti i servizi",
+        "category": "Appartamenti"
     }
 ]

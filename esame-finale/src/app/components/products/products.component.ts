@@ -11,16 +11,31 @@ export class ProductsComponent {
   constructor (private productService: ProductsService) {}
 
   products: any[] = [];
+  filteredProducts!: any[]; 
+  searchQuery: string = '';
+  selectedCategory: string = 'Tutte';
 
   ngOnInit(){
     this.getProducts();
+ 
   }
 
   getProducts(){
     this.productService.getProducts().subscribe({
-      next: (res: any) => 
-      this.products = res
+      next: (res: any) => {
+        this.products = res;
+        this.filteredProducts = [...this.products];
+        this.filterProducts();
+      }
     })
   }
 
+  filterProducts(): void {
+    this.filteredProducts = this.products.filter(product =>
+      product.title.toLowerCase().includes(this.searchQuery.toLowerCase()) &&
+      (this.selectedCategory === 'Tutte' || product.category.toLowerCase() === this.selectedCategory.toLowerCase())
+    );
+    
+  }
+  
 }
