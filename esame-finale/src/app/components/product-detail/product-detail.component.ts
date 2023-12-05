@@ -27,7 +27,7 @@ export class ProductDetailComponent {
           this.products = data.find((product: { id: number; }) => product.id === this.productId);
         },
         error => {
-          console.error('Error fetching product details:', error);
+          console.error('Error', error);
         }
       );
     });
